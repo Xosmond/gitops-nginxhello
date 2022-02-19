@@ -19,10 +19,14 @@ spec:
         app: nginxhello
     spec:
       containers:
-      - image: mcansky/sinatra_hello
+      - image: mcansky/sinatra_hello:172be730245aa55c87ae6de8304ea4d37cc4d29c
         name: nginxhello
         ports:
         - containerPort: 80
         env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
         - name: PORT
           value: 80
