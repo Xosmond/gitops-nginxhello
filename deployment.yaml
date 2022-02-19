@@ -19,7 +19,7 @@ spec:
         app: nginxhello
     spec:
       containers:
-      - image: hello-world
+      - image: datawire/hello-world
         name: nginxhello
         ports:
         - containerPort: 80
