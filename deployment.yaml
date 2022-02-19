@@ -19,7 +19,7 @@ spec:
         app: nginxhello
     spec:
       containers:
-      - image: nbrown/nginxhello:1.19.0
+      - image: hello-world
         name: nginxhello
         ports:
         - containerPort: 80
