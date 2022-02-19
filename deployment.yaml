@@ -33,10 +33,10 @@ spec:
           periodSeconds: 2
           httpGet:
             port: 80
-            path: /healthz/live
+            path: /
         readinessProbe:
           initialDelaySeconds: 2
           periodSeconds: 2
           httpGet:
             port: 80
-            path: /healthz/ready
+            path: /
