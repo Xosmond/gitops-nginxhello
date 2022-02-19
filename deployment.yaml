@@ -19,7 +19,7 @@ spec:
         app: nginxhello
     spec:
       containers:
-      - image: datawire/hello-world
+      - image: mcansky/sinatra_hello
         name: nginxhello
         ports:
         - containerPort: 80
@@ -28,15 +28,3 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName
-        livenessProbe:
-          initialDelaySeconds: 2
-          periodSeconds: 2
-          httpGet:
-            port: 80
-            path: /
-        readinessProbe:
-          initialDelaySeconds: 2
-          periodSeconds: 2
-          httpGet:
-            port: 80
-            path: /
